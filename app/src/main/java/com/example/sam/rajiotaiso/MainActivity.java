@@ -9,20 +9,33 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    Button buttonAddUser;
+    EditText username_input;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonAddUser = (Button) findViewById(R.id.add_user);
-        final EditText username_input = (EditText)findViewById(R.id.username_input);
+        buttonAddUser = (Button) findViewById(R.id.add_user);
+        username_input = (EditText)findViewById(R.id.username_input);
+
         buttonAddUser.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, UserActivity.class);
+
                 Toast.makeText(MainActivity.this,(username_input.getText().toString()),
                         Toast.LENGTH_LONG).show();
+
+                startActivity(intent);
             }
+
+
+
         });
 
     }
