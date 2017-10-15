@@ -40,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,(ecole.getText().toString()),
                         Toast.LENGTH_LONG).show();
 
-                UserModel model = new UserModel(username_input.getText().toString());
-                intent.putExtra("userName",model);
+                UserModel model = new UserModel(username_input.getText().toString(),
+                        langage.getText().toString(),ecole.getText().toString());
+
+                intent.putExtra("user",model);
 
                 startActivity(intent);
             }

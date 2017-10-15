@@ -14,12 +14,20 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
 
         TextView nomParticipant =(TextView)findViewById(R.id.result_username);
+        TextView langageEtudie = (TextView)findViewById(R.id.result_langage);
+        TextView ecoleNom = (TextView)findViewById(R.id.result_ecole);
 
-        UserModel model = getIntent().getExtras().getParcelable("userName");
+        UserModel model = getIntent().getExtras().getParcelable("user");
 
-        String username = model.getUsername();
+        String name = model.getUsername();
+        String langage = model.getLangage();
+        String ecole = model.getEcole();
 
-        nomParticipant.setText(username);
+        nomParticipant.setText(name);
+        langageEtudie.setText(langage);
+        ecoleNom.setText(ecole);
+
+
 
     }
 }

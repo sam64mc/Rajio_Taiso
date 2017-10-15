@@ -13,10 +13,21 @@
         android:id="@+id/result_username"
         tools:text="@string/nom_du_participant"
 
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_langage"
+        tools:text="@string/langage_étudié"
 
+        />
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_ecole"
+        tools:text="@string/Ecole"
 
         />
 

@@ -10,13 +10,31 @@ import android.os.Parcelable;
 public class UserModel implements Parcelable {
 
     private String username;
+    private String langage;
+    private String ecole;
 
-    public UserModel(String username) {
+    public UserModel(String username, String langage, String ecole) {
         this.username = username;
+        this.langage = langage;
+        this.ecole = ecole;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getLangage() {
+        return langage;
+    }
+
+    public String getEcole() {
+        return ecole;
     }
 
     protected UserModel(Parcel in) {
         username = in.readString();
+        langage = in.readString();
+        ecole = in.readString();
     }
 
     public static final Creator<UserModel> CREATOR = new Creator<UserModel>() {
@@ -31,9 +49,7 @@ public class UserModel implements Parcelable {
         }
     };
 
-    public String getUsername() {
-        return username;
-    }
+
 
     @Override
     public int describeContents() {
@@ -43,7 +59,7 @@ public class UserModel implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(username);
+        dest.writeString(langage);
+        dest.writeString(ecole);
     }
-
-
 }
