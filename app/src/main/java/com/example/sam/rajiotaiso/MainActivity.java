@@ -9,9 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     Button buttonAddUser;
     EditText username_input;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(MainActivity.this,(username_input.getText().toString()),
                         Toast.LENGTH_LONG).show();
+
+                UserModel model = new UserModel(username_input.getText().toString());
 
                 startActivity(intent);
             }
