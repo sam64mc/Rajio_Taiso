@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                String userN = username_input.getText().toString();
+
                 Intent intent = new Intent(MainActivity.this, UserActivity.class);
                 intent.putExtra("userName",username_input.getText().toString());
 
