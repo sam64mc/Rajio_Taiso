@@ -1,6 +1,7 @@
 package com.example.sam.rajiotaiso;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, UserActivity.class);
-                intent.putExtra("userName",username_input.getText().toString());
 
                 Toast.makeText(MainActivity.this,(username_input.getText().toString()),
                         Toast.LENGTH_LONG).show();
 
                 UserModel model = new UserModel(username_input.getText().toString());
+                intent.putExtra("userName",model);
 
                 startActivity(intent);
             }

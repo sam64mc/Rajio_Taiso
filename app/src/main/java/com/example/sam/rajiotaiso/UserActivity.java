@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 public class UserActivity extends AppCompatActivity {
 
-     String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +15,11 @@ public class UserActivity extends AppCompatActivity {
 
         TextView nomParticipant =(TextView)findViewById(R.id.result_username);
 
-        Intent intent = this.getIntent();
-        name = intent.getStringExtra("userName");
-        nomParticipant.setText(name);
+        UserModel model = getIntent().getExtras().getParcelable("userName");
+
+        String username = model.getUsername();
+
+        nomParticipant.setText(username);
 
     }
 }
