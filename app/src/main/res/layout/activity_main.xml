@@ -20,6 +20,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/langageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/langage_tudi"
+        />
+
+    <EditText
+        android:id="@+id/langageEditText"
+        android:hint="@string/votre_langage_tudi_ici"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/ecoleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/participant"
+        />
+
+    <EditText
+        android:id="@+id/ecoleEditText"
+        android:hint="@string/votre_cole_ici"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/add_user"
         android:text="@string/envoyer"

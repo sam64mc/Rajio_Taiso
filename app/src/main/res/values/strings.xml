@@ -4,4 +4,8 @@
     <string name="votre_nom_ici">Votre nom ici</string>
     <string name="nom_du_participant">Nom du participant</string>
     <string name="envoyer">Envoyer</string>
+    <string name="langage_tudi">Langage étudié</string>
+    <string name="votre_langage_tudi_ici">Votre langage étudié ici</string>
+    <string name="votre_cole_ici">Votre école ici</string>
+
 </resources>
